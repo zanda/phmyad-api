@@ -9,7 +9,7 @@ try {
     await db.authenticate();
     console.log('Database connected...');
 } catch (error) {
-    console.error('Connection error: ', error);
+    console.error('DB connection error: ', error);
 }
 
 var corsOptions = {

@@ -12,8 +12,8 @@ const router = express.Router();
 
 router.get('/', getAllClients);
 router.get('/:id', getClientById);
-router.post('/a/:id', addClient);
-router.patch('/u/:id', updateClient);
-router.delete('/d/:id', deleteClient);
+router.post('/', addClient);
+router.patch('/:id', updateClient);
+router.delete('/:id', deleteClient);
 
 export default router;

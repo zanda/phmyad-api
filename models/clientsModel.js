@@ -7,22 +7,28 @@ const { DataTypes } = Sequelize;
 const Clients = db.define('clientsLex', {
     id: {
         type: DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true
     },
     nom: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     },
     prenom: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     },
     phone: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: true
     },
     email: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     }},
     {
-        freezeTableName: true
+        freezeTableName: true,
+        timestamps: false
 });
 
 export default Clients;
