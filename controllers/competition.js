@@ -30,7 +30,7 @@ export const getClientById = async (req, res) => {
 export const addClient = async (req, res) => {
 /*
     res.json({
-        "message": "To be implement [addClient], " + req.body
+        "message": "To be implement [addClient], " + req.body xxx
     });
 */
 
