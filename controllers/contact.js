@@ -1,10 +1,10 @@
 // contacts.js [controller]
-import contacts from "../models/contactsModel.js";
-import Clubs from "../models/contactsModel.js";
+import Contacts from "../models/contactsModel.js";
+//import Clubs from "../models/contactsModel.js";
 
 export const getAllContacts = async (req, res) => {
     try {
-        const clts = await contacts.findAll();
+        const clts = await Contacts.findAll();
         res.json(clts);
     } catch (error) {
         res.json({
@@ -13,9 +13,9 @@ export const getAllContacts = async (req, res) => {
     }
 }
 
-export const getContactsById = async (req, res) => {
+export const getContactById = async (req, res) => {
     try {
-        const clt = await contacts.findAll({
+        const clt = await Contacts.findAll({
             where: {
                 id: req.params.id
             }
@@ -28,7 +28,7 @@ export const getContactsById = async (req, res) => {
     }
 }
 
-export const addContacts = async (req, res) => {
+export const addContact = async (req, res) => {
 /*
     res.json({
         "message": "To be implement [addClient], " + req.body
@@ -36,7 +36,7 @@ export const addContacts = async (req, res) => {
 */
 
     try {
-        await Clubs.create(req.body);
+        await Contacts.create(req.body);
         res.json({
             "message": "Contacts added"
         });   
@@ -49,7 +49,7 @@ export const addContacts = async (req, res) => {
 
 }
 
-export async function updateContacts(req, res) {
+export async function updateContact(req, res) {
     /*
         console.log(req.params);
         res.json({
@@ -57,7 +57,7 @@ export async function updateContacts(req, res) {
         });
     */
     try {
-        await contacts.update(req.body, {
+        await Contacts.update(req.body, {
             where: {
                 id: req.params.id
             }
@@ -73,7 +73,7 @@ export async function updateContacts(req, res) {
 
 }
 
-export const deleteContacts = async (req, res) => {
+export const deleteContact = async (req, res) => {
 /*
     res.json({
         "message": "To be implement [deleteContacts]"
@@ -81,7 +81,7 @@ export const deleteContacts = async (req, res) => {
 */
 
     try {
-        await contacts.destroy({
+        await Contacts.destroy({
             where: {
                 id: req.params.id
             }

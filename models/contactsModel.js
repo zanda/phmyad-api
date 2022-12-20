@@ -4,7 +4,7 @@ import db from "../config/db.js";
 
 const { DataTypes } = Sequelize;
 
-const Contacts = db.define('contacts', {
+const Contacts = db.define('Contacts', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,

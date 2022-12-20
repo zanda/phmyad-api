@@ -1,7 +1,7 @@
 import express from "express";
 
 import {
-    getAllCompetition,
+    getAllCompetitions,
     getCompetitionById,
     addCompetition,
     updateCompetition,
@@ -10,7 +10,7 @@ import {
 
 const router = express.Router();
 
-router.get('/', getAllCompetition);
+router.get('/', getAllCompetitions);
 router.get('/:id', getCompetitionById);
 router.post('/', addCompetition);
 router.patch('/:id', updateCompetition);

@@ -4,7 +4,7 @@ import db from "../config/db.js";
 
 const { DataTypes } = Sequelize;
 
-const inscription = db.define('inscription', {
+const Inscription = db.define('Inscription', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -39,4 +39,4 @@ const inscription = db.define('inscription', {
         timestamps: false
 });
 
-export default inscription;
+export default Inscription;

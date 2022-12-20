@@ -4,7 +4,7 @@ import db from "../config/db.js";
 
 const { DataTypes } = Sequelize;
 
-const competition = db.define('competition', {
+const Competition = db.define('Competition', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -28,7 +28,6 @@ const competition = db.define('competition', {
     },
     id_Arbitres: {
         type: DataTypes.INTEGER,
-        autoIncrement: true,
         primaryKey: true
     }},
     {
@@ -36,4 +35,4 @@ const competition = db.define('competition', {
         timestamps: false
 });
 
-export default competition;
+export default Competition;

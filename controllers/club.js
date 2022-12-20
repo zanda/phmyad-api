@@ -1,4 +1,3 @@
-// client.js [controller]
 import Clubs from "../models/clubsModel.js";
 
 export const getAllClubs = async (req, res) => {
@@ -12,7 +11,7 @@ export const getAllClubs = async (req, res) => {
     }
 }
 
-export const getClubsById = async (req, res) => {
+export const getClubById = async (req, res) => {
     try {
         const clt = await Clubs.findAll({
             where: {
@@ -27,7 +26,7 @@ export const getClubsById = async (req, res) => {
     }
 }
 
-export const addClubs = async (req, res) => {
+export const addClub = async (req, res) => {
 /*
     res.json({
         "message": "To be implement [addClubs], " + req.body
@@ -48,7 +47,7 @@ export const addClubs = async (req, res) => {
 
 }
 
-export async function updateClubs(req, res) {
+export async function updateClub(req, res) {
     /*
         console.log(req.params);
         res.json({
@@ -72,7 +71,7 @@ export async function updateClubs(req, res) {
 
 }
 
-export const deleteClubs = async (req, res) => {
+export const deleteClub = async (req, res) => {
 /*
     res.json({
         "message": "To be implement [deleteClubs]"

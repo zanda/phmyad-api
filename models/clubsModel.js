@@ -18,7 +18,7 @@ const Clubs = db.define('Clubs', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    Catégories: {
+    Categories: {
         type: DataTypes.STRING,
         allowNull: true
  

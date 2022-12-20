@@ -1,7 +1,6 @@
-// client.js [controller]
-import Competition from "../models/competitionModel.js";
+import Competition from "../models/competitionsModel.js";
 
-export const getAllClients = async (req, res) => {
+export const getAllCompetitions = async (req, res) => {
     try {
         const clts = await Competition.findAll();
         res.json(clts);
@@ -12,7 +11,7 @@ export const getAllClients = async (req, res) => {
     }
 }
 
-export const getClientById = async (req, res) => {
+export const getCompetitionById = async (req, res) => {
     try {
         const clt = await Competition.findAll({
             where: {
@@ -27,7 +26,7 @@ export const getClientById = async (req, res) => {
     }
 }
 
-export const addClient = async (req, res) => {
+export const addCompetition = async (req, res) => {
 /*
     res.json({
         "message": "To be implement [addClient], " + req.body xxx
@@ -72,7 +71,7 @@ export async function updateCompetition(req, res) {
 
 }
 
-export const deleteClient = async (req, res) => {
+export const deleteCompetition = async (req, res) => {
 /*
     res.json({
         "message": "To be implement [deleteCompetition]"
@@ -80,7 +79,7 @@ export const deleteClient = async (req, res) => {
 */
 
     try {
-        await Clients.destroy({
+        await Competition.destroy({
             where: {
                 id: req.params.id
             }

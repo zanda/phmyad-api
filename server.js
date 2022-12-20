@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import db from './config/db.js';
-import clubsRoutes from './routes/clubs.js';
-import contactsRoutes from './routes/contacts';
-import competitionRoutes from './routes/competitions';
-import inscriptionRoutes from './routes/inscription';
+import clubRoutes from './routes/club.js';
+import contactRoutes from './routes/contact.js';
+import competitionRoutes from './routes/competition.js';
+import inscriptionRoutes from './routes/inscription.js';
 
 const app = express();
 
@@ -26,10 +26,10 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
     res.json({ message: "It's working !"});
 });
-app.use('/Clubs', clubsRoutes);
-app.use('/Contacts', contactsRoutes);
+app.use('/Club', clubRoutes);
+app.use('/Contact', contactRoutes);
 app.use('/Competition', competitionRoutes);
-app.use('/Insription', inscriptionRoutes);
+app.use('/Inscription', inscriptionRoutes);
 
 const PORT = process.env.PORT || 8080;
 app.listen( PORT, () => {

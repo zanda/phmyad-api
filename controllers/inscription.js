@@ -1,7 +1,7 @@
 // inscription.js [controller]
 import inscription from "../models/inscriptionModel.js";
 
-export const getAllClients = async (req, res) => {
+export const getAllInscriptions = async (req, res) => {
     try {
         const clts = await inscription.findAll();
         res.json(clts);
@@ -72,7 +72,7 @@ export async function updateInscription(req, res) {
 
 }
 
-export const deleteClient = async (req, res) => {
+export const deleteInscription = async (req, res) => {
 /*
     res.json({
         "message": "To be implement [deleteinscription]"
@@ -80,7 +80,7 @@ export const deleteClient = async (req, res) => {
 */
 
     try {
-        await Clients.destroy({
+        await inscription.destroy({
             where: {
                 id: req.params.id
             }

@@ -1,7 +1,7 @@
 import express from "express";
 
 import {
-    getAllInscription,
+    getAllInscriptions,
     getInscriptionById,
     addInscription,
     updateInscription,
@@ -10,7 +10,7 @@ import {
 
 const router = express.Router();
 
-router.get('/', getAllInscription);
+router.get('/', getAllInscriptions);
 router.get('/:id', getInscriptionById);
 router.post('/', addInscription);
 router.patch('/:id', updateInscription);
