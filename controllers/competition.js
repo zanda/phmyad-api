@@ -1,9 +1,9 @@
 // client.js [controller]
-import Clients from "../models/clientsModel.js";
+import Competition from "../models/competitionModel.js";
 
 export const getAllClients = async (req, res) => {
     try {
-        const clts = await Clients.findAll();
+        const clts = await Competition.findAll();
         res.json(clts);
     } catch (error) {
         res.json({
@@ -14,7 +14,7 @@ export const getAllClients = async (req, res) => {
 
 export const getClientById = async (req, res) => {
     try {
-        const clt = await Clients.findAll({
+        const clt = await Competition.findAll({
             where: {
                 id: req.params.id
             }
@@ -35,9 +35,9 @@ export const addClient = async (req, res) => {
 */
 
     try {
-        await Clients.create(req.body);
+        await Competition.create(req.body);
         res.json({
-            "message": "Client added"
+            "message": "Competition added"
         });   
     } catch (error) {
         res.json({
@@ -48,22 +48,21 @@ export const addClient = async (req, res) => {
 
 }
 
-export const updateClient = async (req, res) => {
-/*
-    console.log(req.params);
-    res.json({
-        "message": "To be implement [updateClient]"
-    });
-*/
-
+export async function updateCompetition(req, res) {
+    /*
+        console.log(req.params);
+        res.json({
+            "message": "To be implement [updateClient]"
+        });
+    */
     try {
-        await Clients.update(req.body, {
+        await Competition.update(req.body, {
             where: {
                 id: req.params.id
             }
         });
         res.json({
-            "message": "Client updated"
+            "message": "Competition updated"
         });
     } catch (error) {
         res.json({
@@ -76,7 +75,7 @@ export const updateClient = async (req, res) => {
 export const deleteClient = async (req, res) => {
 /*
     res.json({
-        "message": "To be implement [deleteClient]"
+        "message": "To be implement [deleteCompetition]"
     });
 */
 
@@ -87,7 +86,7 @@ export const deleteClient = async (req, res) => {
             }
         });
         res.json({
-            "message": "Client deleted"
+            "message": "Competition deleted"
         });
     } catch (error) {
         res.json({ message });

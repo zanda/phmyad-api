@@ -1,7 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import db from './config/db.js';
-import clientsRoutes from './routes/index.js';
+import clubsRoutes from './routes/clubs.js';
+import contactsRoutes from './routes/contacts';
+import competitionRoutes from './routes/competitions';
+import inscriptionRoutes from './routes/inscription';
 
 const app = express();
 
@@ -23,7 +26,10 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
     res.json({ message: "It's working !"});
 });
-app.use('/clients', clientsRoutes);
+app.use('/Clubs', clubsRoutes);
+app.use('/Contacts', contactsRoutes);
+app.use('/Competition', competitionRoutes);
+app.use('/Insription', inscriptionRoutes);
 
 const PORT = process.env.PORT || 8080;
 app.listen( PORT, () => {

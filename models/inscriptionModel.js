@@ -1,28 +1,36 @@
-// clients [model]
+// inscription [model]
 import { Sequelize } from "sequelize";
 import db from "../config/db.js";
 
 const { DataTypes } = Sequelize;
 
-const Clients = db.define('clientsLex', {
+const inscription = db.define('inscription', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    nom: {
+    Nom_du_club: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    prenom: {
+    Categorie: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    phone: {
+    Nom: {
         type: DataTypes.STRING,
         allowNull: true
     },
-    email: {
+    Prenom: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    Date_de_naissance: {
+        type: DataTypes.STRING,
+        allowNull: true
+    },
+    Sexe: {
         type: DataTypes.STRING,
         allowNull: false
     }},
@@ -31,4 +39,4 @@ const Clients = db.define('clientsLex', {
         timestamps: false
 });
 
-export default Clients;
+export default inscription;
