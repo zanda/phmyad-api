@@ -4,7 +4,7 @@ import db from './config/db.js';
 import clubRoutes from './routes/club.js';
 import contactRoutes from './routes/contact.js';
 import competitionRoutes from './routes/competition.js';
-import inscriptionRoutes from './routes/inscription.js';
+import athleteRoutes from './routes/athlete.js';
 
 const app = express();
 
@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 app.use('/Club', clubRoutes);
 app.use('/Contact', contactRoutes);
 app.use('/Competition', competitionRoutes);
-app.use('/Inscription', inscriptionRoutes);
+app.use('/Athlete', athleteRoutes);
 
 const PORT = process.env.PORT || 8080;
 app.listen( PORT, () => {

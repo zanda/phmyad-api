@@ -1,16 +1,16 @@
-// inscription [model]
+// Athletes [model]
 import { Sequelize } from "sequelize";
 import db from "../config/db.js";
 
 const { DataTypes } = Sequelize;
 
-const Inscription = db.define('Inscription', {
+const Athletes = db.define('Athletes', {
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    Nom_du_club: {
+    NomDuClub: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -26,7 +26,7 @@ const Inscription = db.define('Inscription', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    Date_de_naissance: {
+    DateDeNaissance: {
         type: DataTypes.STRING,
         allowNull: true
     },
@@ -39,4 +39,4 @@ const Inscription = db.define('Inscription', {
         timestamps: false
 });
 
-export default Inscription;
+export default Athletes;

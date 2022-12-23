@@ -10,15 +10,15 @@ const Contacts = db.define('Contacts', {
         autoIncrement: true,
         primaryKey: true
     },
-    Nom_club: {
+    nomClub: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    Nom_Prenom_President: {
+    nomPresident: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    Telephone: {
+    phone: {
         type: DataTypes.STRING,
         allowNull: true
     },
@@ -26,15 +26,7 @@ const Contacts = db.define('Contacts', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    Nom_Prenom_Coach: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    Telephone: {
-        type: DataTypes.STRING,
-        allowNull: true
-    },
-    email: {
+    nomCoach: {
         type: DataTypes.STRING,
         allowNull: false
     }},
